@@ -9,24 +9,18 @@ yum install qemu-img caja xorg-* mesa-* -y
 * /sbin/init hooks the systemd pid 1 from host as --privileged
 
 ```
-
-docker run -it -d --privileged=true --rm -e DISPLAY=$DISPLAY \
- --device /dev/kvm \
-     --device /dev/snd \
--v /tmp/.X11-unix:/tmp/.X11-unix c4pt/fedora-34-docker-nested /sbin/init
-
-
 docker run -it -d --privileged=true --rm -e DISPLAY=$DISPLAY \
 --device /dev/kvm -p 22:22 -p 2022:2022 \
 --device /dev/snd -v /tmp/.X11-unix:/tmp/.X11-unix \
 c4pt/fedora-34-docker-nested /sbin/init
-
-
+```
+```
 docker exec -it <vm_hash> bash
 
 docker-reload
-
 ```
+
+
 
 Example of docker-nested-guest
 ```
@@ -46,16 +40,21 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX packets 760  bytes 5863168 (5.5 MiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
-from Host
+from Host completely outside of docker-nested from another local terminal 
 ```
 ssh -Y root@172.17.0.2
 root passwd: Docker-fedora-34-nested-docker
 
+
+[root@614f3461c819 ~]# xhost +
 [root@614f3461c819 ~]# cd /opt
 [root@614f3461c819 ~]# git clone https://github.com/c4pt000/Docker-OSX-bigSur
 [root@614f3461c819 ~]# cd Docker-OSX-bigSur
 [root@614f3461c819 ~]# ./docker-install-run.sh
 [root@614f3461c819 ~]# docker exec -it 3d9f bash
+
+
+
 [root@3d9fb6c3a156 /]# ifconfig
 [root@3d9fb6c3a156 /]# xhost +
 
@@ -99,10 +98,12 @@ ssh -Y -p 2022 172.18.0.1
 passwd:-> fedora-mac
 
 [root@3d9fb6c3a156 ~]# xhost +
-
-
-
 [root@3d9fb6c3a156 ~]# mac-install
+
+and or
+
+[root@3d9fb6c3a156 ~]# mac
+
 
 
 
