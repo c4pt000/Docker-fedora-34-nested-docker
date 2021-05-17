@@ -11,6 +11,8 @@ docker run -it -d --privileged=true --rm -e DISPLAY=$DISPLAY \
 
 docker exec -it <vm_hash> bash
 
+docker-reload
+
 cd /usr/bin
 yum install wget -y
 wget https://raw.githubusercontent.com/c4pt000/Docker-fedora-34-nested-docker/main/xhost-gen
@@ -32,6 +34,12 @@ yum reinstall docker-ce -y
 systemctl start docker
 
 docker ps -a
+
+```
+passwd for root : 
+
+Docker-fedora-34-nested-docker
+```
 
 
 cd /usr/bin
