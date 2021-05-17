@@ -15,6 +15,10 @@ docker run -it -d --privileged=true --rm -e DISPLAY=$DISPLAY \
      --device /dev/snd \
 -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/fedora-34-docker-nested /sbin/init
 
+
+docker run -it -d --privileged=true --rm -e DISPLAY=$DISPLAY  --device /dev/kvm -p 22:22     --device /dev/snd -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/fedora-34-docker-nested /sbin/init
+
+
 docker exec -it <vm_hash> bash
 
 docker-reload
