@@ -133,6 +133,7 @@ and or
 
 [root@8e46da6a107b ~]# mac
 
+"exit" to leave running terminals
 
 
 
