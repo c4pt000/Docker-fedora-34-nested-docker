@@ -57,6 +57,9 @@ root passwd: Docker-fedora-34-nested-docker
 [root@614f3461c819 ~]# ./docker-install-run.sh
 [root@614f3461c819 ~]# docker exec -it 3d9f bash
 [root@3d9fb6c3a156 /]# ifconfig
+[root@3d9fb6c3a156 /]# xhost +
+
+
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 172.18.0.2  netmask 255.255.0.0  broadcast 172.18.255.255
         ether 02:42:ac:12:00:02  txqueuelen 0  (Ethernet)
