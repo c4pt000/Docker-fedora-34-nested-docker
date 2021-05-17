@@ -1,5 +1,7 @@
 # Docker-fedora-34-nested-docker (* requires docker-ce)
 
+* /sbin/init hooks the systemd pid 1 from host as --privileged
+
 ```
 
 docker run -it -d --privileged=true --rm -e DISPLAY=$DISPLAY \
