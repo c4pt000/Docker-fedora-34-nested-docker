@@ -76,12 +76,16 @@ root passwd: Docker-fedora-34-nested-docker
 [root@614f3461c819 ~]# git clone https://github.com/c4pt000/Docker-OSX-bigSur
 [root@614f3461c819 ~]# cd Docker-OSX-bigSur
 [root@614f3461c819 ~]# ./docker-install-run.sh
-[root@614f3461c819 ~]# docker exec -it 3d9f bash
+[root@614f3461c819 ~]# docker ps -a
+CONTAINER ID   IMAGE             COMMAND       CREATED          STATUS          PORTS                                                                                      NAMES
+8e46da6a107b   c4pt/fedora-mac   "sbin/init"   17 minutes ago   Up 17 minutes   0.0.0.0:2022->2022/tcp, :::2022->2022/tcp, 0.0.0.0:50922->10022/tcp, :::50922->10022/tcp   elated_swartz
+
+[root@614f3461c819 ~]# docker exec -it 8e46 bash
 
 
 
-[root@3d9fb6c3a156 /]# ifconfig
-[root@3d9fb6c3a156 /]# xhost +
+[root@8e46da6a107b /]# ifconfig
+[root@8e46da6a107b /]# xhost +
 
 
 eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
@@ -122,12 +126,12 @@ ssh -Y -p 2022 172.18.0.1
 
 passwd:-> fedora-mac
 
-[root@3d9fb6c3a156 ~]# xhost +
-[root@3d9fb6c3a156 ~]# mac-install
+[root@8e46da6a107b ~]# xhost +
+[root@8e46da6a107b ~]# mac-install
 
 and or
 
-[root@3d9fb6c3a156 ~]# mac
+[root@8e46da6a107b ~]# mac
 
 
 
