@@ -38,3 +38,19 @@ chmod +x /usr/bin/xhost-gen
 
 xhost-gen
 ```
+
+
+
+yum install openssh-server net-tools -y
+yum install passwd cracklib-dicts -y
+
+"set passwd"
+
+passwd
+
+   cd /etc/ssh
+   mv sshd_config sshd_config.orig
+   wget sshd
+   
+
+
