@@ -34,6 +34,7 @@ yum reinstall docker-ce -y
 systemctl start docker
 
 docker ps -a
+```
 
 ```
 passwd for root : 
