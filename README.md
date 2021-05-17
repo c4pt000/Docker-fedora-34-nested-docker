@@ -84,10 +84,10 @@ virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
         TX packets 0  bytes 0 (0.0 B)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
-
+```
 
 then from the HOST side running all of this "docker-nested" -> "fedora-mac"
-
+```
 ssh -p 22 root@172.17.0.2
 
 passwd:-> Docker-fedora-34-nested-docker
