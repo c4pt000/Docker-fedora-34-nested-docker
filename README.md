@@ -5,6 +5,31 @@ from host
 yum install qemu-img caja xorg-* mesa-* -y
 ```
 
+firewall ports LAN side 22, 2022 (xhost + can be dangerous along with running ssh aside from --privileged )
+
+```
+for ssh to macOS guest
+
+docker maps port 22 from macos when remote login is activated to 10022, docker exposes 10022 wrapped to port 50922 for the host side as per docker -p 50922:10022
+
+connecting to macOS guest running within this docker where user is your username with "Remote login" activated
+
+ssh -p 50922 user@172.17.0.1
+
+or with X11_Forwarding enabled
+
+ssh -p 50922 -Y user@172.17.0.1
+sending/receiving files with ssh "scp"
+
+pushing "Xcode.xip" to user's account at folder /Users/user/Desktop
+
+scp -P 50922 -r Xcode_12.5.xip user@172.17.0.1:/Users/user/Desktop
+
+pulling "Xcode.xip" from guest to host to current working directory
+scp -P 50922 -r user@172.17.0.1:/Users/user/Downloads/Xcode_12.5.xip Xcode_12.5.xip
+```
+
+
 
 * /sbin/init hooks the systemd pid 1 from host as --privileged
 
