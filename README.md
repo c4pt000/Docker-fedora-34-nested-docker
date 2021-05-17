@@ -40,7 +40,7 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX packets 760  bytes 5863168 (5.5 MiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
-from Host completely outside of docker-nested from another local terminal 
+from Host completely outside of docker-nested from another local terminal Example running graphical "Docker-OSX-bigSur"
 ```
 ssh -Y root@172.17.0.2
 root passwd: Docker-fedora-34-nested-docker
