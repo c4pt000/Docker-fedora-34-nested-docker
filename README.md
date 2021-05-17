@@ -35,7 +35,7 @@ scp -P 50922 -r user@172.17.0.1:/Users/user/Downloads/Xcode_12.5.xip Xcode_12.5.
 
 ```
 docker run -it -d --privileged=true --rm -e DISPLAY=$DISPLAY \
---device /dev/kvm -p 22:22 -p 2022:2022 \
+--device /dev/kvm -p 22:22 -p 2022:2022 -p 5900:5900 \
 --device /dev/snd -v /tmp/.X11-unix:/tmp/.X11-unix \
 c4pt/fedora-34-docker-nested /sbin/init
 ```
