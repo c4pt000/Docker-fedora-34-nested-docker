@@ -39,18 +39,20 @@ chmod +x /usr/bin/xhost-gen
 xhost-gen
 ```
 
-
-
+SSH forwarding from docker-nested guest
+```
 yum install openssh-server net-tools -y
 yum install passwd cracklib-dicts -y
 
 "set passwd"
 
 passwd
-
-   cd /etc/ssh
-   mv sshd_config sshd_config.orig
-   wget sshd
+cd /etc/ssh
+mv sshd_config sshd_config.orig
+wget https://raw.githubusercontent.com/c4pt000/Docker-fedora-34-nested-docker/main/sshd_config
+systemctl restart sshd
+```
    
-
+ then ssh -Y root@172.17.0.7                          where root@172.17.0.7 is the ip of the nested docker guest from ifconfig
+using freshly made passwd for docker-nested guest
 
