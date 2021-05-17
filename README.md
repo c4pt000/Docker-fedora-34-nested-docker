@@ -92,17 +92,18 @@ ssh -p 22 root@172.17.0.2
 
 passwd:-> Docker-fedora-34-nested-docker
 
-ssh -p 2022 root@172.18.0.2
+[root@614f3461c819 ~]# xhost +
+
+ssh -Y -p 2022 172.18.0.1
 
 passwd:-> fedora-mac
 
-[root@3d9fb6c3a156 ~]# xhost-gen
+[root@3d9fb6c3a156 ~]# xhost +
 
-might take Crtl-C if stuck
 
-[root@3d9fb6c3a156 ~]#  cat /root/.Xauthority
 
-should match here
+[root@3d9fb6c3a156 ~]# mac-install
+
 
 
 
