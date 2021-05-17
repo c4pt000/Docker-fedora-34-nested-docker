@@ -35,11 +35,13 @@ systemctl start docker
 
 docker ps -a
 ```
-
+default root passwd for fedora-34-nested
 ```
 passwd for root : 
 
 Docker-fedora-34-nested-docker
+
+change with passwd 
 ```
 
 
