@@ -85,7 +85,7 @@ virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
 
 ```
 
-then from the HOST side running all of this "docker-nested" -> "fedora-mac"
+then from the HOST side running all of this outside of docker-nested new terminal
 ```
 ssh -p 22 root@172.17.0.2
 
