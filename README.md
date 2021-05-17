@@ -128,13 +128,13 @@ virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
 
 then from the HOST side running all of this outside of docker-nested new terminal
 ```
-ssh -p 22 root@172.17.0.2
+ssh -p 22 -Y root@172.17.0.2
 
 passwd:-> Docker-fedora-34-nested-docker
 
 [root@614f3461c819 ~]# xhost +
 
-ssh -Y -p 2022 172.18.0.1
+ssh -Y -p 2022 -Y root@172.18.0.1
 
 passwd:-> fedora-mac
 
