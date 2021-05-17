@@ -1,4 +1,10 @@
 # Docker-fedora-34-nested-docker (* requires docker-ce)
+from host
+
+```
+yum install qemu-img caja xorg-* mesa-* -y
+```
+
 
 * /sbin/init hooks the systemd pid 1 from host as --privileged
 
