@@ -12,3 +12,13 @@ systemctl start docker
 docker ps -a
 
 ```
+
+
+temp until new push
+
+
+rm -rf /var/lib/docker/runtimes /var/lib/docker/runtimes-old
+yum reinstall docker-ce -y
+systemctl start docker
+
+docker ps -a
