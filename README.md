@@ -5,7 +5,7 @@ from host
 yum install qemu-img caja xorg-* mesa-* -y
 ```
 
-firewall ports LAN side 22, 2022 (xhost + can be dangerous along with running ssh aside from --privileged )
+firewall ports LAN side 22, 2022, 5900 (xhost + can be dangerous along with running ssh aside from --privileged and 5900)
 
 ```
 for ssh to macOS guest
