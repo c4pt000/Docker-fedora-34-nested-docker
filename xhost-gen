@@ -1,4 +1,4 @@
-yum install vim-common xorg-* mesa-* -y
+yum install vim-common xorg-* mesa-* caja -y
 # Rename the existing .Xauthority file by running the following command
 mv /root/.Xauthority /root/old.Xauthority 
 
