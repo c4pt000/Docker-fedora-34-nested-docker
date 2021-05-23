@@ -1,7 +1,7 @@
 # Docker-fedora-34-nested-docker (* requires docker-ce)
 from host
 
-https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/
+# https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/
 
 ```
 yum install qemu-img caja xorg-* mesa-* -y
